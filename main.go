@@ -1,11 +1,9 @@
 package main
 
 import (
-	"fmt"
-	"github.com/RamVellanki/habittracker/router"
+	"github.com/RamVellanki/habittracker/app/router"
 )
 
 func main() {
 	router.RegisterRouter()
-	fmt.Println("Hello Golang!")
 }
