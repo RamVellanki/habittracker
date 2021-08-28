@@ -1,0 +1,67 @@
+{
+    "schemes": [
+        "http"
+    ],
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a simple API built in Go",
+        "title": "Habit Tracker API",
+        "contact": {},
+        "version": "1.0"
+    },
+    "host": "localhost:4040",
+    "basePath": "/",
+    "paths": {
+        "/habits": {
+            "get": {
+                "description": "get's active or all habits based on query",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "root"
+                ],
+                "summary": "Get all active/all habits",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "set to all to get all habits (active/inactive)",
+                        "name": "status",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/habits/{id}": {
+            "get": {
+                "description": "get's all habits based on input Id",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "root"
+                ],
+                "summary": "Get all habits by Id",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "use the id of the habit that you wish to get",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        }
+    }
+}

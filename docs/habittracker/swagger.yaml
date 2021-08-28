@@ -1,0 +1,44 @@
+basePath: /
+host: localhost:4040
+info:
+  contact: {}
+  description: This is a simple API built in Go
+  title: Habit Tracker API
+  version: "1.0"
+paths:
+  /habits:
+    get:
+      description: get's active or all habits based on query
+      parameters:
+      - description: set to all to get all habits (active/inactive)
+        in: query
+        name: status
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: Get all active/all habits
+      tags:
+      - root
+  /habits/{id}:
+    get:
+      description: get's all habits based on input Id
+      parameters:
+      - description: use the id of the habit that you wish to get
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: Get all habits by Id
+      tags:
+      - root
+schemes:
+- http
+swagger: "2.0"
