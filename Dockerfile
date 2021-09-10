@@ -10,6 +10,6 @@ COPY . .
 
 RUN go build -o /habittracker
 
-EXPOSE 4040
+EXPOSE 8080
 
 CMD ["/habittracker"]

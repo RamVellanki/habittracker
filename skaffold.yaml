@@ -1,0 +1,14 @@
+apiVersion: skaffold/v2beta21
+kind: Config
+metadata:
+  name: habittracker
+build:
+  artifacts:
+  - image: ramvellanki/habittracker
+    docker:
+      dockerfile: Dockerfile
+deploy:
+  kubectl:
+    manifests:
+    - k8s/deployment.yaml
+    - k8s/service.yaml

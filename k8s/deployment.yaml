@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: habittracker
+  labels:
+    app: habittracker 
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: habittracker 
+  template:
+    metadata:
+      labels:
+        app: habittracker 
+    spec:
+      containers:
+      - name: habittracker-container
+        image: ramvellanki/habittracker:0.1

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: habittracker-app-svc
+  labels:
+    app: habittracker 
+spec:
+  selector:
+    app: habittracker 
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

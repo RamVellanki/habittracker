@@ -1,5 +1,5 @@
 basePath: /
-host: localhost:4040
+host: localhost:8080
 info:
   contact: {}
   description: This is a simple API built in Go

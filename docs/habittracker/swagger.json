@@ -9,7 +9,7 @@
         "contact": {},
         "version": "1.0"
     },
-    "host": "localhost:4040",
+    "host": "localhost:8080",
     "basePath": "/",
     "paths": {
         "/habits": {

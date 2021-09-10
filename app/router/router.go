@@ -11,11 +11,11 @@ import (
 func RegisterRouter() {
 	router := gin.Default()
 
-	url := ginSwagger.URL("http://localhost:4040/swagger/doc.json")
+	url := ginSwagger.URL("http://localhost:8080/swagger/doc.json")
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler, url))
 
 	router.GET("/habits", handler.GetHabits)
 	router.GET("/habits/:id", handler.GetHabitsById)
 	// router.POST("/habits", handler.PostHabits)
-	router.Run("0.0.0.0:4040")
+	router.Run("0.0.0.0:8080")
 }
