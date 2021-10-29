@@ -1,3 +1,3 @@
 [X] Add DAL layer to get from Postgres
-[ ] Add migrations and initialize them in startup
+[X] Add migrations and initialize them in startup
 [ ] Make DB part of k8s
